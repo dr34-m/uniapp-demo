@@ -98,7 +98,7 @@ const store = new Vuex.Store({
 * 页面`<template>`中取值`{{ vuex_token }}`
 * js代码`<script>`中取值`this.vuex_token`
 * 拦截器等通用组件中（须获取上下文vm）取值`vm.vuex_token`
-* 
+
 ###### 2.2.2.2.2 设值
 
 可以设定值的类型包括基本数据类型，和可以进行序列化的对象等。
