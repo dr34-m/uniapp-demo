@@ -133,6 +133,8 @@ this.$u.vuex('vuex_token', {
 
 ##### 2.2.3.2 api集中管理
 
+提示：get请求第一个参数是配置，post请求第一个参数是请求值，第二个才是配置
+
 在`/src/api/`目录下新建`api.js`文件，内容如下
 ```js
 const http = uni.$u.http
@@ -144,10 +146,25 @@ export const getMenu1 = () => http.get(`/ebapi/public_api/index`)
 export const getMenu2 = (id) => http.get(`/ebapi/public_api/index/${id}`)
 
 // get请求
-export const getMenu3 = (params) => http.get('/ebapi/public_api/index', params)
+export const getMenu3 = (params) => http.get('/ebapi/public_api/index', {params})
+
+// get请求（带header等配置）
+export const getMenu4 = (params) => http.get('/ebapi/public_api/index', {
+	params,
+	header: {
+		token: '1111'
+	}
+})
 
 // post请求
 export const postMenu = (data) => http.post('/ebapi/public_api/index', data)
+
+// post请求（带header等）
+export const postMenu = (data) => http.post('/ebapi/public_api/index', data, {
+	header: {
+		token: '1111'
+	}
+})
 ```
 
 ##### 2.2.3.3 api使用
@@ -157,9 +174,12 @@ import {
 	getMenu2
 } from '@/api/api.js';
 
-getMenu2(id).then(res=>{
+getMenu2(id).then(res => {
+	// 经过拦截器的处理，进入到这里的请求都是成功请求，无需考虑请求失败的情况
 	console.log('res',res)
 }).catch(err=>{
+	// 多数情况下，不需要写catch，因为拦截器已经进行了弹窗提示等操作
+	// 但当页面需要对错误进行处理时（例如关闭加载动画等），就需要在catch中操作
 	console.log('err',err)
 })
 ```
