@@ -1,5 +1,7 @@
 # 通用公众号/小程序/h5/app框架
 
+本通用框架基于`uniapp`与`uView UI 2.0.31`，封装了日常开发中最常用的接口请求、数据中心、环境配置等操作，上手即用。
+
 ## 1. 运维
 
 ### 1.1 构建
@@ -11,6 +13,8 @@ npm run build:h5
 # 微信小程序
 npm run build:mp-weixin
 ```
+
+其他平台构建，例如快应用、支付宝小程序等详见[uniapp官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app)
 
 ### 1.2 H5修改前缀
 
@@ -25,6 +29,8 @@ npm run build:mp-weixin
 }
 ```
 
+更多配置详见[uniapp官方文档](https://uniapp.dcloud.net.cn/collocation/manifest.html)
+
 ### 1.3 配置文件
 
 配置文件在`/src/config/index.js`
@@ -37,6 +43,8 @@ npm run build:mp-weixin
 npm install
 npm run dev:h5
 ```
+
+其他平台启动，例如快应用、支付宝小程序等详见[uniapp官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app)
 
 ### 2.2 说明
 
@@ -96,12 +104,12 @@ const store = new Vuex.Store({
 ###### 2.2.2.2.1 取值
 
 * 页面`<template>`中取值`{{ vuex_token }}`
-* js代码`<script>`中取值`this.vuex_token`
+* js代码（包括`App.vue`页面）`<script>`中取值`this.vuex_token`
 * 拦截器等通用组件中（须获取上下文vm）取值`vm.vuex_token`
 
 ###### 2.2.2.2.2 设值
 
-可以设定值的类型包括基本数据类型，和可以进行序列化的对象等。
+可以设定值的类型为`基本数据类型`和`可以进行序列化的对象/列表等`。
 
 ```js
 // 字符串

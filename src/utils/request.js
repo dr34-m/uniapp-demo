@@ -28,10 +28,10 @@ module.exports = (vm) => {
 		const data = response.data
 		if (data.code) {
 			if (data.code == 401) {
-				// TODO 登录失效操作
+				// TODO 对登录失效做点什么
 				return Promise.reject(data)
-			} else if (data.code !== 200) {
-				uni.$u.toast(data.msg || '系统异常');
+			} else if (data.code != 200) {
+				uni.$u.toast(data.msg || `系统接口${data.code}异常`);
 				return Promise.reject(data)
 			}
 			return data === undefined ? {} : data
@@ -39,7 +39,7 @@ module.exports = (vm) => {
 		return data
 	}, (response) => {
 		// 对响应错误做点什么 （statusCode !== 200）
-		uni.$u.toast("系统异常")
+		uni.$u.toast(`系统接口${response.statusCode}异常`)
 		return Promise.reject(response)
 	})
 }
