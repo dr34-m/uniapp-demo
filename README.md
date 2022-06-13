@@ -7,8 +7,11 @@
 ### 1.1 构建
 
 ```shell
-# H5
-npm run build:h5
+# H5 生产
+npm run build
+
+# H5 dev
+npm run build:dev
 
 # 微信小程序
 npm run build:mp-weixin
@@ -40,11 +43,14 @@ npm run build:mp-weixin
 ### 2.1 启动
 
 ```shell
+# 安装依赖
 npm install
-npm run dev:h5
+
+# 运行
+npm run serve
 ```
 
-其他平台启动，例如快应用、支付宝小程序等详见[uniapp官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app)
+其他平台运行，例如快应用、支付宝小程序等详见[uniapp官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html#%E8%BF%90%E8%A1%8C%E3%80%81%E5%8F%91%E5%B8%83uni-app)
 
 ### 2.2 说明
 
