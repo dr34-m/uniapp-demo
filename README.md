@@ -130,6 +130,8 @@ this.$u.vuex('vuex_token', {
 
 #### 2.2.3 接口
 
+接口基于[luch-request](https://www.quanzhan.co/luch-request/)，`uView`对其简单封装，本示例使用的是`uView`封装后的，对最常用的场景做了说明，更详细的文档见[uView的http请求](https://www.uviewui.com/js/http.html)
+
 ##### 2.2.3.1 统一拦截器
 
 接口拦截器在`/src/utils/request.js`中，可以根据需要自行修改；
@@ -177,23 +179,104 @@ export const postMenu = (data) => http.post('/ebapi/public_api/index', data)
 export const postMenu = (data) => http.post('/ebapi/public_api/index', data, {
 	header: {
 		token: '1111'
-	}
+	},
+	responseType: 'arraybuffer'
 })
+
+// 更多请求使用
+uni.$u.http.get(url[, config])
+uni.$u.http.post(url[, data[, config]])
+uni.$u.http.delete(url[, data[, config]])
+uni.$u.http.put(url[, data[, config]])
+uni.$u.http.middleware(config)
+uni.$u.http.request(config)
+uni.$u.http.upload(url[, config])
+uni.$u.http.head(url[, data[, config]])
+uni.$u.http.connect(url[, data[, config]])
+uni.$u.http.options(url[, data[, config]])
+uni.$u.http.trace(url[, data[, config]])
 ```
 
 ##### 2.2.3.3 api使用
 
 ```js
 import {
-	getMenu2
+	getMenu2,
+	getMenu3
 } from '@/api/api.js';
 
-getMenu2(id).then(res => {
+getMenu2(1).then(res => {
 	// 经过拦截器的处理，进入到这里的请求都是成功请求，无需考虑请求失败的情况
 	console.log('res',res)
 }).catch(err=>{
 	// 多数情况下，不需要写catch，因为拦截器已经进行了弹窗提示等操作
-	// 但当页面需要对错误进行处理时（例如关闭加载动画等），就需要在catch中操作
+	// 但当页面需要对错误进行处理时（例如关闭加载动画，取消按钮loading等），就需要在catch中操作
 	console.log('err',err)
 })
+
+getMenu3({
+	id: 1
+}).then(
+	...
+).catch(
+	...
+)
+
+postMenu({
+	id: 1
+}).then(
+	...
+).catch(
+	...
+)
 ```
+
+#### 2.2.4 全局过滤器
+
+##### 2.2.4.1 定义
+
+全局过滤器定义在`/src/utils/filters.js`中，可参照其增加自己的过滤规则，常用定义方式如下
+
+```js
+// 0-男,1-女
+const sexFilter = (value) => {
+	let sexList = ['男', '女'];
+	return sexList[value] ? sexList[value] : "--";
+}
+
+// xx-小学及以下，cz-初中，gz-高中及以上
+const educationFilter = (value) => {
+	switch (value) {
+		case 'xx':
+			return '小学及以下';
+		case 'cz':
+			return '初中';
+		case 'gz':
+			return '高中及以上';
+		default:
+			return '--';
+	}
+}
+
+export default {
+	sexFilter,
+	educationFilter
+}
+```
+
+##### 2.2.4.2 使用
+
+因为已经在`main.js`中定义如下
+
+```js
+import filters from '@/utils/filters';
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k]));
+```
+
+所以页面中无需引入，如下直接使用
+
+```html
+<view>过滤器-性别：{{ sex | sexFilter }}</view>
+```
+
+效果：当`sex`为`0`，页面输出`男`；当`sex`为`1`，页面输出`女`

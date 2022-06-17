@@ -30,8 +30,8 @@ const saveLifeData = function(key, value) {
 const store = new Vuex.Store({
 	state: {
 		vuex_token: lifeData.vuex_token ? lifeData.vuex_token : null,
-		vuex_tmp: '数据中心数据',
-		vuex_code: 8880
+		vuex_tmp: '数据中心赋值给页面',
+		vuex_code: 1
 	},
 	mutations: {
 		$uStore(state, payload) {

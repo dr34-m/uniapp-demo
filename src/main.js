@@ -8,6 +8,9 @@ Vue.mixin(vuexStore);
 
 import store from '@/store';
 
+import filters from '@/utils/filters';
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k]));
+
 import App from './App'
 
 
