@@ -11,7 +11,9 @@
             <p>地点：<b>location can not be found</b></p>
           </div> -->
         </div>
-        <div class="cover-inside-left" :class="{'opening':isOpening}"></div>
+        <div class="cover-inside-left" :class="{'opening':isOpening}">
+					<div class="img"></div>
+				</div>
         <div class="cover-inside-right" :class="{'opening':isOpening}"></div>
         <img class="cover-inside-seal" src="../images/seal.png" @click="openInvitation" :class="{'invitation-flight':isOpening}">
       </div>
@@ -55,7 +57,7 @@ export default {
     top: 0;
     left: 0;
     width: 94vw;
-    height: calc(93vh - 86rpx);
+    height: 93vh;
     padding: 2vh 3vw;
     padding-top: 5vh;
     z-index: 4;
@@ -122,6 +124,9 @@ export default {
           -webkit-transition: -webkit-transform 0.5s;
           transform-origin: 0 50%;
           -webkit-transform-origin: 0 50%;
+					.img {
+						
+					}
           &.opening{
             transform: rotate3d(0,1,0,-140deg);
             -webkit-transform: rotate3d(0,1,0,-140deg);

@@ -11,6 +11,7 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "王启航❤姜海兰",
 		"navigationBarBackgroundColor": "#2B2B48",
-		"backgroundColor": "#2B2B48"
+		"backgroundColor": "#2B2B48",
+		"navigationStyle": "custom"
 	}
 }

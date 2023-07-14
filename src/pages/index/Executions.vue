@@ -8,9 +8,9 @@
       <span class="duration" v-if="execution.duration!==undefined">{{ execution.duration }} ms</span>
     </p>
     <!--进度条-->
-    <p class="code" v-show="isProcessed">
+    <p class="code-progress" v-show="isProcessed">
       <span class="addon">~ </span>
-      {{ progressBarText }}
+      <pre>{{ progressBarText }}</pre>
       <span class="percentage">{{ percentage }}%</span>
     </p>
     <!--执行命令-->
@@ -130,5 +130,9 @@
       margin-left: 10px;
       color: #BF36B7;
     }
+		.code-progress {
+			display: flex;
+			align-items: center;
+		}
   }
 </style>
