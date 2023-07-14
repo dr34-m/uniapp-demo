@@ -7,7 +7,7 @@
         <a href="javascript:;" class="maximum"></a>
     </header>
     <!-- 日期 -->
-    <p class="code">Last login: <span>{{ startDate }}</span> on dr34m</p>
+    <p class="code">Last login: <span>{{ startDate }}</span><span style="padding-left: 14rpx;">on Dr3@m</span></p>
     <!--代码编辑区-->
     <pre>
       <code v-html="highlightedCode"></code>
@@ -125,14 +125,14 @@
   height: 100%;
   margin: 0 auto;
   background: #2B2B48;
-  perspective: 500px;
+  perspective: 500rpx;
 }
 .wedding-editor{
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15px;
-  padding-top: 50px;
+  padding: 28rpx;
+  padding-top: 80rpx;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;

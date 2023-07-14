@@ -3,13 +3,13 @@
     <div class="invitation-container" :class="{ 'invitation-down':isOpening }">
       <div class="invitation-cover">
         <div class="cover-content" :class="{'invitation-up':isOpening}">
-          <div class="content-inside">
+          <!-- <div class="content-inside">
             <img class="content-inside-photo" src="../images/photo.jpg">
             <p>我们结婚啦！</p>
             <p><b>Jun & undefined</b></p>
             <p>时间：invalid date value</p>
             <p>地点：<b>location can not be found</b></p>
-          </div>
+          </div> -->
         </div>
         <div class="cover-inside-left" :class="{'opening':isOpening}"></div>
         <div class="cover-inside-right" :class="{'opening':isOpening}"></div>
@@ -88,80 +88,25 @@ export default {
         width: 100%;
         height: 100%;
         background-color: #D65047;
-        border-radius: 10px;
+        border-radius: 10rpx;
         perspective: 500px;
         box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.15);
         .cover-content{
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 670rpx;
-          height: 100%;
+          top: 4rpx;
+          left: 4rpx;
+          width: calc(100% - 48rpx);
+          height: calc(100% - 28rpx);
+          border-radius: 10rpx;
+          background: #FFFFFF;
           padding: 10rpx 20rpx;
           transition: transform 0.6s cubic-bezier(0.4, 0, 1, 1);
           -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 1, 1);
           &.invitation-up{
-            transform: translateY(-60px);
-            -webkit-transform: translateY(-60px);
+            transform: translateY(-90rpx);
+            -webkit-transform: translateY(-90rpx);
           }
-          .content-inside{
-            height: calc(100% - 70rpx);
-            padding: 20rpx;
-            color: #a9895d;
-            background-color: #FFF1DE;
-            text-align: center;
-            overflow: auto;
-            .content-inside-photo{
-              width: 100%;
-              margin-bottom: 10px;
-              padding: 5px;
-              border: 1px solid #f7debb;
-            }
-            p{
-              margin-top: 0;
-              margin-bottom: 5px;
-            }
-            .content-inside-bless{
-              input{
-                width: 100%;
-                height: 35px;
-                margin-bottom: 10px;
-                outline: none;
-                border: none;
-                border-bottom: 1px solid #f7debb;
-                color: #a9895d;
-                background: transparent;
-                font-size: 16px;
-                &::-webkit-input-placeholder { color: #E8D1B1;font-size: 12px; }
-                &::-moz-placeholder { color: #E8D1B1;font-size: 12px; }
-                &:-ms-input-placeholder { color: #E8D1B1;font-size: 12px; }
-                &:-moz-placeholder { color: #E8D1B1;font-size: 12px; }
-              }
-              >div{
-                display: flex;
-                button{
-                  width: 100%;
-                  height: 35px;
-                  color: #a9895d;
-                  background: #f7debb;
-                  border: none;
-                  outline: none;
-                  &:disabled{
-                    opacity: 0.8;
-                  }
-                  &:first-child{
-                    margin-right: 10px;
-                    flex: 1;
-                  }
-                  &:last-child{
-                    width: 60px;
-                    border: 1px solid #f7debb;
-                    background: transparent;
-                  }
-                }
-              }
-            }
-          }
+          
         }
         .cover-inside-left{
           position: absolute;

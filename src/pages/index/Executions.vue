@@ -9,7 +9,7 @@
     </p>
     <!--进度条-->
     <p class="code" v-show="isProcessed">
-      <span class="addon">~</span>
+      <span class="addon">~ </span>
       {{ progressBarText }}
       <span class="percentage">{{ percentage }}%</span>
     </p>
