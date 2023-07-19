@@ -1,13 +1,6 @@
 <template>
 	<view class="main">
-		<view class="img">
-			<u-image :src="src" width="72px" height="72px"></u-image>
-		</view>
-		<view>请求数据：{{ hitokoto }}</view>
-		<view>页面数据：{{ tmp }}</view>
-		<view>数据中心：{{ vuex_tmp }}</view>
-		<view>过滤器-性别：{{ sex | sexFilter }}</view>
-		<view>过滤器-学历：{{ education | educationFilter }}</view>
+		<topTitle></topTitle>
 	</view>
 </template>
 
@@ -15,18 +8,18 @@
 	import {
 		getHitokoto
 	} from '@/api/api.js';
+	import topTitle from '@/pages/components/topTitle.vue';
 	export default {
+		components: {
+			topTitle
+		},
 		data() {
 			return {
-				hitokoto: null,
-				tmp: null,
 				src: require('@/static/logo.png'),
-				sex: 1,
-				education: 'cz'
 			}
 		},
 		onLoad() {
-			this.getData();
+			// this.getData();
 		},
 		methods: {
 			getData() {
@@ -45,14 +38,11 @@
 
 <style lang="scss">
 	.main {
-		
-		view {
-			margin: 20rpx;
-		}
-		
-		.img {
-			display: flex;
-			justify-content: center;
-		}
+		background-color: #4b352b;
+		font-size: 27rpx;
+		color: #d5c6c2;
+		line-height: 45rpx;
+		width: 750rpx;
+		height: 100%;
 	}
 </style>
