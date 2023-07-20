@@ -14,4 +14,9 @@
 
 <style lang="scss">
 	@import "uview-ui/index.scss";
+	
+	@font-face {
+		font-family: 'font_208';
+		src: url('@/static/1693724_208.ttf');
+	}
 </style>

@@ -1,6 +1,7 @@
 <template>
-	<view class="main">
+	<view class="mainContent">
 		<topTitle></topTitle>
+		<centerMov></centerMov>
 	</view>
 </template>
 
@@ -9,9 +10,11 @@
 		getHitokoto
 	} from '@/api/api.js';
 	import topTitle from '@/pages/components/topTitle.vue';
+	import centerMov from '@/pages/components/centerMov.vue';
 	export default {
 		components: {
-			topTitle
+			topTitle,
+			centerMov
 		},
 		data() {
 			return {
@@ -37,12 +40,13 @@
 </script>
 
 <style lang="scss">
-	.main {
+	.mainContent {
 		background-color: #4b352b;
 		font-size: 27rpx;
 		color: #d5c6c2;
 		line-height: 45rpx;
 		width: 750rpx;
 		height: 100%;
+		overflow: hidden;
 	}
 </style>
