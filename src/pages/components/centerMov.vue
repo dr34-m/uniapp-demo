@@ -38,7 +38,7 @@
 					<view class="fen">5201314人评分</view>
 				</view>
 			</view>
-			<view class="bottom">131,4万人看过 520人想看</view>
+			<view class="bottom">1314万人看过 520人想看</view>
 		</view>
 		<view class="musicBox"></view>
 	</view>

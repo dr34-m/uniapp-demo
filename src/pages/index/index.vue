@@ -2,6 +2,10 @@
 	<view class="mainContent">
 		<topTitle></topTitle>
 		<centerMov></centerMov>
+		<page0></page0>
+		<page1></page1>
+		<page2></page2>
+		<view style="height: 200rpx;"></view>
 	</view>
 </template>
 
@@ -11,10 +15,16 @@
 	} from '@/api/api.js';
 	import topTitle from '@/pages/components/topTitle.vue';
 	import centerMov from '@/pages/components/centerMov.vue';
+	import page0 from '@/pages/components/page0.vue';
+	import page1 from '@/pages/components/page1.vue';
+	import page2 from '@/pages/components/page2.vue';
 	export default {
 		components: {
 			topTitle,
-			centerMov
+			centerMov,
+			page0,
+			page1,
+			page2
 		},
 		data() {
 			return {
