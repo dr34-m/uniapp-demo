@@ -54,7 +54,7 @@
 		background-color: #4b352b;
 		font-size: 27rpx;
 		color: #d5c6c2;
-		line-height: 45rpx;
+		line-height: 47rpx;
 		width: 750rpx;
 		height: 100%;
 		overflow: hidden;

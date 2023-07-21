@@ -1,6 +1,6 @@
 <template>
 	<view class="pHeng">
-		<view class="p1" :style="'width:'+size+'rpx;height:'+size+'rpx;margin-left:'+size+'rpx;'"></view>
+		<view class="p1" :style="'width:'+size+'rpx;height:'+size+'rpx;'"></view>
 		<view class="p2" :style="'width:'+size+'rpx;height:'+size+'rpx;margin-left:'+size+'rpx;'"></view>
 		<view class="p3" :style="'width:'+size+'rpx;height:'+size+'rpx;margin-left:'+size+'rpx;'"></view>
 	</view>
@@ -19,7 +19,6 @@
 
 <style lang="scss">
 	.pHeng {
-		width: 750rpx;
 		display: flex;
 		align-items: center;
 		justify-content: center;

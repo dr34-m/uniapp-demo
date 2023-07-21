@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	import sLine from '@/pages/components/sLine.vue';
+	import sLine from '@/pages/components/utils/sLine.vue';
 	export default {
 		name: 'Top0',
 		components: {
