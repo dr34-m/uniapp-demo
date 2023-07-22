@@ -18,8 +18,8 @@
 						Love is the beauty<br />of the soul
 					</view>
 				</view>
-				<view class="pt1 left" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptSmall + '.png\');'" />
-				<view class="pt2" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBig + '.png\');'" />
+				<view class="pt1 left" :style="'background-image: url(' + vuex_url + 'photo/' + data.ptSmall + '.png);'" />
+				<view class="pt2" :style="'background-image: url(' + vuex_url + 'photo/' + data.ptBig + '.png);'" />
 			</template>
 			<template v-else>
 				<view class="btmBox">
@@ -28,13 +28,13 @@
 						Love is the beauty<br />of the soul
 					</view>
 				</view>
-				<view class="pt2 left" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBig + '.png\');'" />
-				<view class="pt1" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptSmall + '.png\');'" />
+				<view class="pt2 left" :style="'background-image: url(' + vuex_url + 'photo/' + data.ptBig + '.png);'" />
+				<view class="pt1" :style="'background-image: url(' + vuex_url + 'photo/' + data.ptSmall + '.png);'" />
 			</template>
 		</view>
 
 		<view class="content" v-html="data.content"></view>
-		<view class="pt3" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBottom + '.png\');'" />
+		<view class="pt3" :style="'background-image: url(' + vuex_url + 'photo/' + data.ptBottom + '.png);'" />
 	</view>
 </template>
 
