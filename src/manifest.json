@@ -1,6 +1,6 @@
 {
-    "name" : "",
-    "appid" : "",
+    "name" : "王启航姜海兰的婚礼",
+    "appid" : "__UNI__0FF7202",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -54,7 +54,6 @@
     "quickapp" : {},
     /* 快应用特有相关 */
     "mp-weixin" : {
-        /* 微信小程序特有相关 */
         "appid" : "wx2dc84bb1e8be509d",
         "setting" : {
             "urlCheck" : false
