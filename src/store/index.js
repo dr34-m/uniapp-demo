@@ -12,7 +12,7 @@ try {
 }
 
 // 需要永久存储，且下次APP启动需要取出的，在state中的变量名
-let saveStateKeys = [];
+let saveStateKeys = ['vuex_hangStopFlag'];
 
 // 保存变量到本地存储中
 const saveLifeData = function(key, value) {
@@ -29,7 +29,14 @@ const saveLifeData = function(key, value) {
 }
 const store = new Vuex.Store({
 	state: {
-		vuex_url: 'https://mp-1252906577.cos.ap-nanjing.myqcloud.com/'
+		vuex_url: 'https://mp-1252906577.cos.ap-nanjing.myqcloud.com/',
+		vuex_text2: '“I love three things in this world.<br>Sun,moon and you.<br>Sun for morning,moon for night,<br>and you forever”<br><br>浮世三千，吾爱有三<br>日月与卿<br>日为朝，月为暮<br>卿为朝朝暮暮<br>...',
+		vuex_text3: 'you are as romantic as the star<br><br>每个人都是一座孤岛，只是有的人<br>在海啸来临前，找到了与之共鸣的那片海域',
+		vuex_mucName: 'Stay With Me',
+		vuex_mucAuther: '찬열/펀치',
+		vuex_mucDetail: '词：지훈，曲：이승주/로코베리',
+		vuex_hangStopFlag: lifeData.vuex_hangStopFlag ? lifeData.vuex_hangStopFlag : false,
+		vuex_mucFlag: false
 	},
 	mutations: {
 		$uStore(state, payload) {

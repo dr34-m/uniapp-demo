@@ -1,33 +1,19 @@
 <template>
 	<view class="page0">
 		<pHeng size="24" top="96" margin="315"></pHeng>
-		<view class="img0 photoBorder"></view>
-		<view class="text">
-			“I love three things in this world.<br />
-			Sun,moon and you.<br />
-			Sun for morning,moon for night,<br />
-			and you forever”<br /><br />
-			浮世三千，吾爱有三<br />
-			日月与卿<br />
-			日为朝，月为暮<br />
-			卿为朝朝暮暮<br />
-			...
+		<view class="img0"></view>
+		<view class="text" v-html="vuex_text2">
+			
 		</view>
 		<view class="linTxt">
-			<xBtn lText="新郎" rText="王启航" type="1"></xBtn>
-			<view class="circlePhoto photoBorder pt1"></view>
-		</view>
-		<view class="linTxt">
-			<view class="circlePhoto photoBorder pt2"></view>
 			<xBtn lText="新娘" rText="姜海兰" type="1"></xBtn>
+			<view class="circlePhoto pt2"></view>
 		</view>
-		<view class="text">
-			I′m so happy i get to be<br />
-			next to you and look at the world<br />
-			through your eyes<br /><br />
-			我很庆幸能陪在你身边<br />
-			通过你的目光看世界<br />
+		<view class="linTxt">
+			<view class="circlePhoto pt1"></view>
+			<xBtn lText="新郎" rText="王启航" type="1"></xBtn>
 		</view>
+		<view class="text" v-html="vuex_text3"></view>
 		<view class="flim">
 			<image :src="flim" class="flimBorder"></image>
 		</view>
@@ -58,6 +44,9 @@
 			width: 594rpx;
 			height: 831rpx;
 			margin: 77rpx;
+			background-image: url($url+'02.jpg');
+			background-position: center;
+			background-size: 700rpx auto;
 		}
 
 		.text {
@@ -65,33 +54,45 @@
 			color: #cebdb5;
 			margin: 80rpx 0;
 		}
-		
+
 		.linTxt {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			margin: 36rpx 0;
+
 			.circlePhoto {
 				width: 260rpx;
 				height: 260rpx;
 				border-radius: 50%;
 			}
-			
+
 			.pt1 {
-				margin-left: 80rpx;
-			}
-			
-			.pt2 {
 				margin-right: 50rpx;
+				background-image: url($url+'03.jpg');
+				background-position: 370rpx 580rpx;
+				background-size: 520rpx auto;
+			}
+
+			.pt2 {
+				margin-left: 80rpx;
+				background-image: url($url+'04.jpg');
+				background-position: -120rpx 550rpx;
+				background-size: 490rpx auto;
 			}
 		}
-		
+
 		.flim {
-			
+			background-image: url($url+'05.jpg');
+			background-position: center;
+			background-size: 650rpx auto;
+			width: 670rpx;
+			height: 448rpx;
+			margin: 0 40rpx;
+
 			.flimBorder {
 				width: 670rpx;
 				height: 450rpx;
-				margin: 0 40rpx;
 			}
 		}
 	}

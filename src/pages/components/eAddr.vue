@@ -25,8 +25,8 @@
 		</view>
 		<view class="text" v-html="text"></view>
 		<view class="ptBox">
-			<view class="pt pt1 photoBorder"></view>
-			<view class="pt photoBorder"></view>
+			<view class="pt pt1"></view>
+			<view class="pt pt2"></view>
 		</view>
 	</view>
 </template>
@@ -86,7 +86,7 @@
 			width: 646rpx;
 			height: 466rpx;
 			margin: 50rpx auto;
-			background-color: rgba(0, 0, 0, .3);
+			background-color: #45436a;
 			border-radius: 26rpx;
 			padding: 22rpx;
 
@@ -182,6 +182,17 @@
 			.pt1 {
 				margin-right: 28rpx;
 				margin-bottom: 124rpx;
+				background-image: url($url+'09.jpg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 274rpx auto;
+			}
+			
+			.pt2 {
+				background-image: url($url+'08.jpg');
+				background-position: center -120rpx;
+				background-repeat: no-repeat;
+				background-size: 600rpx auto;
 			}
 		}
 	}

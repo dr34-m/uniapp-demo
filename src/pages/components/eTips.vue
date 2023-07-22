@@ -1,7 +1,7 @@
 <template>
 	<view class="eTips">
 		<bTitle title="婚礼Tips"></bTitle>
-		<view class="photoBorder pt"></view>
+		<view class="pt"></view>
 		<view class="tips">
 			<view class="tipItem" v-for="item in tips">
 				<view class="title">
@@ -55,6 +55,10 @@
 			width: 606rpx;
 			height: 370rpx;
 			margin: 50rpx auto;
+				background-image: url($url+'10.jpg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 606rpx auto;
 		}
 
 		.tips {

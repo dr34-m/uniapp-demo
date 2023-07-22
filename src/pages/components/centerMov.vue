@@ -1,7 +1,8 @@
 <template>
 	<view class="centerMov">
 		<view class="movTop">
-			<view class="movLeft"></view>
+			<view class="movLeft">
+			</view>
 			<view class="movRight">
 				<view class="movRightTitle">我们的婚礼</view>
 				<view class="titleEng">Love on the foor</view>
@@ -40,7 +41,16 @@
 			</view>
 			<view class="bottom">1314万人看过 520人想看</view>
 		</view>
-		<view class="musicBox"></view>
+		<view class="musicBox">
+			<view class="left">
+				<view class="title">{{vuex_mucAuther}} - 《{{vuex_mucName}}》</view>
+				<view class="sub">{{vuex_mucDetail}}</view>
+			</view>
+			<view class="right">
+				<image :src="muc" class="center" v-show="vuex_mucFlag"></image>
+				<view class="mucImg"></view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -52,7 +62,8 @@
 				want: require('@/static/want.png'),
 				had: require('@/static/had.png'),
 				stars5: require('@/static/stars5.png'),
-				stars: require('@/static/stars.png')
+				stars: require('@/static/stars.png'),
+				muc: require('@/static/muc.gif')
 			}
 		},
 		methods: {}
@@ -71,10 +82,12 @@
 			padding-bottom: 42rpx;
 
 			.movLeft {
-				border: 1px solid green;
 				width: 270rpx;
 				height: 420rpx;
 				margin-right: 19rpx;
+				background-image: url($url+'01.jpg');
+				background-position: center -20rpx;
+				background-size: 300rpx auto;
 			}
 
 			.movRight {
@@ -185,20 +198,61 @@
 					}
 				}
 			}
+
 			.bottom {
 				font-size: 21rpx;
 				color: #7a6760;
 				margin-top: 14rpx;
 			}
 		}
-		
+
 		.musicBox {
 			margin: 48rpx;
-			width: 654rpx;
+			width: 610rpx;
 			height: 160rpx;
 			box-shadow: rgb(204, 204, 204) 0 0 7.5rpx 1.875rpx;
 			background-color: #FFFFFF;
 			border-radius: 12rpx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 22rpx;
+
+			.left {
+				.title {
+					color: #000000;
+					font-size: 30rpx;
+					font-weight: bold;
+				}
+
+				.sub {
+					margin-top: 16rpx;
+					color: rgb(136, 131, 137);
+					font-size: 23rpx;
+				}
+			}
+
+			.right {
+				display: flex;
+				align-items: flex-end;
+
+				.center {
+					width: 28rpx;
+					height: 28rpx;
+					margin-right: 8rpx;
+				}
+
+				.mucImg {
+					width: 124rpx;
+					height: 124rpx;
+								background-image: url($url+'11.jpg');
+								background-position: center -20rpx;
+								background-repeat: no-repeat;
+								background-size: 124rpx auto;
+				}
+			}
+
+
 		}
 	}
 </style>

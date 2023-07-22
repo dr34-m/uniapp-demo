@@ -9,8 +9,8 @@
 		<eAddr></eAddr>
 		<eTips></eTips>
 		<view class="navBox">
-			<view class="msc start" @click="stop" v-if="palyFlag"></view>
-			<view class="msc stop" @click="start" v-else></view>
+			<view class="msc start" @click="handStop" v-if="vuex_mucFlag"></view>
+			<view class="msc stop" @click="handStart" v-else></view>
 			<view class="nav" @click="pageTo"></view>
 		</view>
 	</view>
@@ -40,8 +40,7 @@
 		data() {
 			return {
 				nav: require('@/static/nav.png'),
-				innerAudioContext: null,
-				palyFlag: false
+				innerAudioContext: null
 			}
 		},
 		onLoad() {
@@ -49,10 +48,12 @@
 				useWebAudioImplement: false
 			});
 			this.innerAudioContext.src = this.vuex_url + 'msc/stay.mp3';
-			this.start();
 		},
 		onHide() {
 			this.stop();
+		},
+		onShow() {
+			this.start();
 		},
 		methods: {
 			pageTo() {
@@ -61,13 +62,23 @@
 					duration: 300
 				});
 			},
+			handStart() {
+				this.$u.vuex('vuex_hangStopFlag', false);
+				this.start();
+			},
+			handStop() {
+				this.$u.vuex('vuex_hangStopFlag', true);
+				this.stop();
+			},
 			start() {
-				this.innerAudioContext.play();
-				this.palyFlag = true;
+				if(!this.vuex_hangStopFlag) {
+					this.innerAudioContext.play();
+					this.$u.vuex('vuex_mucFlag', true);
+				}
 			},
 			stop() {
 				this.innerAudioContext.pause();
-				this.palyFlag = false;
+				this.$u.vuex('vuex_mucFlag', false);
 			}
 		}
 	}
@@ -87,7 +98,6 @@
 			position: fixed;
 			bottom: 60rpx;
 			right: 30rpx;
-			opacity: .9;
 
 			.msc {
 				width: 80rpx;
@@ -124,9 +134,10 @@
 				background-size: 90rpx;
 				background-repeat: no-repeat;
 				box-shadow: #7a5138 0 0 6rpx 1rpx;
-				background-color: #ff5772;
+				background-color: #39b54a;
 				border-radius: 10rpx;
 				margin-top: 30rpx;
+				opacity: .9;
 			}
 		}
 

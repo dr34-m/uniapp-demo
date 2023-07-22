@@ -16,7 +16,7 @@
 			</view>
 		</view>
 		<view class="bottom">
-			<view class="photoBorder ptoe"></view>
+			<view class="ptoe"></view>
 			<view class="foot">W♡J ｜ SAVE THE DATE ｜ 2023 . 8 . 6</view>
 		</view>
 	</view>
@@ -61,6 +61,9 @@
 			margin: auto;
 			border: 11rpx solid #be926d;
 			box-shadow: #e6bca3 0 0 0 13rpx;
+			background-image: url($url+'06.jpg');
+			background-position: center;
+			background-size: 720rpx auto;
 		}
 
 		.center {
@@ -70,19 +73,20 @@
 			background-size: 645rpx 1110rpx;
 			background-repeat: no-repeat;
 			background-position: 199rpx 20rpx;
-			
+
 			.contentBox {
 				margin: 40rpx 60rpx;
+
 				.title {
 					display: flex;
 					align-items: center;
 					font-size: 27rpx;
-			
+
 					.to {
 						color: rgb(206, 189, 181);
 						font-weight: bold;
 					}
-			
+
 					.ln {
 						transform: rotate(50deg);
 						width: 2rpx;
@@ -92,19 +96,19 @@
 						margin-right: 18rpx;
 						margin-top: 40rpx;
 					}
-			
+
 					.you {
 						color: #FFFFFF;
 						font-style: italic;
 						margin-top: 80rpx;
 					}
 				}
-				
+
 				.letter {
 					text-align: left;
 					margin-top: 110rpx;
 				}
-				
+
 				.inv {
 					margin-top: 110rpx;
 					text-align: center;
@@ -116,11 +120,15 @@
 			margin: auto;
 			width: 680rpx;
 			border-top: 14rpx solid #e6bca3;
-			
+
 			.ptoe {
 				height: 428rpx;
+				background-image: url($url+'07.jpg');
+				background-position: center 0rpx;
+				background-repeat: no-repeat;
+				background-size: 720rpx auto;
 			}
-			
+
 			.foot {
 				text-align: center;
 				color: #473529;
