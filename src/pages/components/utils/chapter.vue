@@ -15,26 +15,26 @@
 				<view class="btmBox">
 					<view class="lin linL"></view>
 					<view class="txt txtL">
-						Love is the beauty<br/>of the soul
+						Love is the beauty<br />of the soul
 					</view>
 				</view>
-				<view class="pt1 photoBorder left"></view>
-				<view class="pt2 photoBorder"></view>
+				<view class="pt1 left" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptSmall + '.png\');'" />
+				<view class="pt2" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBig + '.png\');'" />
 			</template>
 			<template v-else>
 				<view class="btmBox">
 					<view class="lin linR"></view>
 					<view class="txt txtR">
-						Love is the beauty<br/>of the soul
+						Love is the beauty<br />of the soul
 					</view>
 				</view>
-				<view class="pt2 photoBorder left"></view>
-				<view class="pt1 photoBorder"></view>
+				<view class="pt2 left" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBig + '.png\');'" />
+				<view class="pt1" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptSmall + '.png\');'" />
 			</template>
 		</view>
 
 		<view class="content" v-html="data.content"></view>
-		<view class="photoBorder pt3"></view>
+		<view class="pt3" :style="'background-image: url(\'' + vuex_url + 'photo/' + data.ptBottom + '.png\');'" />
 	</view>
 </template>
 
@@ -88,23 +88,25 @@
 					height: 2rpx;
 					background-color: #e1c0a1;
 					margin-bottom: 20rpx;
+					z-index: 20;
 				}
+
 				.txt {
 					color: #876c64;
 				}
-				
+
 				.linL {
 					margin-left: 100rpx;
 				}
-				
+
 				.txtL {
 					margin-left: -20rpx;
 				}
-				
+
 				.linR {
 					margin-left: 260rpx;
 				}
-				
+
 				.txtR {
 					margin-right: -130rpx;
 					text-align: right;
@@ -115,6 +117,7 @@
 				width: 242rpx;
 				height: 347rpx;
 				margin-bottom: 80rpx;
+				background-size: 242rpx 347rpx;
 			}
 
 			.left {
@@ -124,6 +127,7 @@
 			.pt2 {
 				width: 336rpx;
 				height: 505rpx;
+				background-size: 336rpx 505rpx;
 			}
 		}
 
@@ -134,6 +138,7 @@
 		.pt3 {
 			width: 630rpx;
 			height: 400rpx;
+			background-size: 630rpx 400rpx;
 			margin: 80rpx 60rpx;
 		}
 	}

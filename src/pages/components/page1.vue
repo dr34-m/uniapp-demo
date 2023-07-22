@@ -21,21 +21,21 @@
 				chapter: [{
 					title: "相遇",
 					content: "2018/03/25<br/>遇见你是我一切美好的开始<br/>愿望足够幸运可以一直拥有你<br/>你是我义无反顾，不掺任何虚假喜欢上的人",
-					ptSmall: require('@/static/logo.png'),
-					ptBig: require('@/static/logo.png'),
-					ptBottom: require('@/static/logo.png')
+					ptSmall: '41',
+					ptBig: '42',
+					ptBottom: '43'
 				},{
 					title: "相恋",
 					content: "2018/03/25<br/>遇见你是我一切美好的开始<br/>愿望足够幸运可以一直拥有你<br/>你是我义无反顾，不掺任何虚假喜欢上的人",
-					ptSmall: require('@/static/logo.png'),
-					ptBig: require('@/static/logo.png'),
-					ptBottom: require('@/static/logo.png')
+					ptSmall: '41',
+					ptBig: '42',
+					ptBottom: '43'
 				},{
 					title: "相伴",
 					content: "2018/03/25<br/>遇见你是我一切美好的开始<br/>愿望足够幸运可以一直拥有你<br/>你是我义无反顾，不掺任何虚假喜欢上的人",
-					ptSmall: require('@/static/logo.png'),
-					ptBig: require('@/static/logo.png'),
-					ptBottom: require('@/static/logo.png')
+					ptSmall: '41',
+					ptBig: '42',
+					ptBottom: '43'
 				}]
 			}
 		},

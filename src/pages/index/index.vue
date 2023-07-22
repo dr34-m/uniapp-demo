@@ -1,7 +1,7 @@
 <template>
 	<view class="mainContent">
 		<topTitle></topTitle>
-		<centerMov></centerMov>
+		<centerMov @start="handStart" @stop="handStop"></centerMov>
 		<page0></page0>
 		<page1></page1>
 		<page2></page2>
@@ -10,11 +10,9 @@
 		<eTips></eTips>
 		<end></end>
 		<view class="pic"></view>
-		<view class="navBox">
-			<view class="msc start" @click="handStop" v-if="vuex_mucFlag"></view>
-			<view class="msc stop" @click="handStart" v-else></view>
-			<view class="nav" @click="pageTo"></view>
-		</view>
+		<view class="msc start" @click="handStop" v-if="vuex_mucFlag"></view>
+		<view class="msc stop" @click="handStart" v-else></view>
+		<view class="nav" @click="pageTo"></view>
 	</view>
 </template>
 
@@ -98,51 +96,52 @@
 		height: 100%;
 		overflow: hidden;
 
-		.navBox {
+
+		.msc {
+			position: fixed;
+			top: 30rpx;
+			right: 50rpx;
+			width: 80rpx;
+			height: 80rpx;
+			border-radius: 50%;
+			background-position: center;
+			background-size: 90rpx;
+		}
+
+		.start {
+			background-image: url('@/static/msc.png');
+			animation: 3s linear 0s infinite normal none running menurotate;
+		}
+
+		@keyframes menurotate {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.stop {
+			background-image: url('@/static/mscs.png');
+		}
+
+		.nav {
 			position: fixed;
 			bottom: 60rpx;
-			right: 30rpx;
-
-			.msc {
-				width: 80rpx;
-				height: 80rpx;
-				border-radius: 50%;
-				background-position: center;
-				background-size: 90rpx;
-			}
-
-			.start {
-				background-image: url('@/static/msc.png');
-				animation: 3s linear 0s infinite normal none running menurotate;
-			}
-
-			@keyframes menurotate {
-				0% {
-					transform: rotate(0deg);
-				}
-
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-
-			.stop {
-				background-image: url('@/static/mscs.png');
-			}
-
-			.nav {
-				width: 80rpx;
-				height: 100rpx;
-				background-image: url('@/static/nav.png');
-				background-position: center;
-				background-size: 90rpx;
-				background-repeat: no-repeat;
-				box-shadow: #7a5138 0 0 6rpx 1rpx;
-				background-color: #39b54a;
-				border-radius: 10rpx;
-				margin-top: 30rpx;
-				opacity: .9;
-			}
+			right: 50rpx;
+			width: 80rpx;
+			height: 100rpx;
+			background-image: url('@/static/nav.png');
+			background-position: center;
+			background-size: 90rpx;
+			background-repeat: no-repeat;
+			box-shadow: #7a5138 0 0 6rpx 1rpx;
+			background-color: #39b54a;
+			border-radius: 10rpx;
+			margin-top: 30rpx;
+			opacity: .9;
 		}
 
 		.pic {

@@ -41,7 +41,7 @@
 			</view>
 			<view class="bottom">1314万人看过 520人想看</view>
 		</view>
-		<view class="musicBox">
+		<view class="musicBox" @click="changeMuc">
 			<view class="left">
 				<view class="title">{{vuex_mucAuther}} - 《{{vuex_mucName}}》</view>
 				<view class="sub">{{vuex_mucDetail}}</view>
@@ -66,7 +66,15 @@
 				muc: require('@/static/muc.gif')
 			}
 		},
-		methods: {}
+		methods: {
+			changeMuc() {
+				if (this.vuex_hangStopFlag) {
+					this.$emit("start");
+				} else {
+					this.$emit("stop");
+				}
+			}
+		}
 	}
 </script>
 
@@ -245,10 +253,10 @@
 				.mucImg {
 					width: 124rpx;
 					height: 124rpx;
-								background-image: url($url+'11.jpg');
-								background-position: center -20rpx;
-								background-repeat: no-repeat;
-								background-size: 124rpx auto;
+					background-image: url($url+'11.jpg');
+					background-position: center -20rpx;
+					background-repeat: no-repeat;
+					background-size: 124rpx auto;
 				}
 			}
 
