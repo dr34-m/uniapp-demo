@@ -4,7 +4,7 @@
 		<view v-html="text.join('<br/><br/>')" class="content"></view>
 		<view class="pto"></view>
 		<view class="center">
-			<pHeng size="18" class="topHeng"></pHeng>
+			<pHeng size="18" top="256" margin="60"></pHeng>
 			<view class="contentBox">
 				<view class="title">
 					<view class="to">To</view>
@@ -12,12 +12,12 @@
 					<view class="you">最亲爱的你们</view>
 				</view>
 				<view class="letter" v-html="content.join('<br/><br/>')"></view>
-				<view class="inv">邀请人：王启航 & 姜海兰</view>
+				<view class="inv">邀请人：王启航 ♡ 姜海兰</view>
 			</view>
 		</view>
 		<view class="bottom">
 			<view class="photoBorder ptoe"></view>
-			<view class="foot">W&J｜SAVE THE DATE｜2023.8.6</view>
+			<view class="foot">W♡J ｜ SAVE THE DATE ｜ 2023 . 8 . 6</view>
 		</view>
 	</view>
 </template>
@@ -64,17 +64,12 @@
 		}
 
 		.center {
-			min-height: 1400rpx;
+			min-height: 1200rpx;
 			width: 750rpx;
 			background-image: url('@/static/l2.png');
 			background-size: 645rpx 1110rpx;
 			background-repeat: no-repeat;
 			background-position: 199rpx 20rpx;
-
-			.topHeng {
-				width: 250rpx;
-				padding-top: 256rpx;
-			}
 			
 			.contentBox {
 				margin: 40rpx 60rpx;

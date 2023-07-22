@@ -1,6 +1,6 @@
 <template>
 	<view class="page0">
-		<pHeng size="24" style="margin-top: 96rpx;"></pHeng>
+		<pHeng size="24" top="96" margin="315"></pHeng>
 		<view class="img0 photoBorder"></view>
 		<view class="text">
 			“I love three things in this world.<br />

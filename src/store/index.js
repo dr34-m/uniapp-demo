@@ -12,7 +12,7 @@ try {
 }
 
 // 需要永久存储，且下次APP启动需要取出的，在state中的变量名
-let saveStateKeys = ['vuex_token'];
+let saveStateKeys = [];
 
 // 保存变量到本地存储中
 const saveLifeData = function(key, value) {
@@ -29,9 +29,7 @@ const saveLifeData = function(key, value) {
 }
 const store = new Vuex.Store({
 	state: {
-		vuex_token: lifeData.vuex_token ? lifeData.vuex_token : null,
-		vuex_tmp: '数据中心赋值给页面',
-		vuex_code: 1
+		vuex_url: 'https://mp-1252906577.cos.ap-nanjing.myqcloud.com/'
 	},
 	mutations: {
 		$uStore(state, payload) {

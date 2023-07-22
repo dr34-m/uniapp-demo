@@ -17,7 +17,7 @@
 					<p>想把“我们”说与你听</p>
 				</view>
 				<view class="nameLine">
-					<view class="name">王启航 & 姜海兰</view>
+					<view class="name">王启航 ♡ 姜海兰</view>
 					<view class="xxian"></view>
 					<view class="nameTime">2023 . 8 . 6</view>
 				</view>

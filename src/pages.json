@@ -10,6 +10,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "王启航❤姜海兰",
-		"navigationStyle": "custom"
+		"navigationBarBackgroundColor": "#afe6e3"
+		// "navigationStyle": "custom"
 	}
 }
