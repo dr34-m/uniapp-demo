@@ -83,12 +83,14 @@
 		}
 
 		.mapBox {
-			width: 646rpx;
-			height: 466rpx;
+			width: 470rpx;
+			// height: 466rpx;
 			margin: 50rpx auto;
 			background-color: #45436a;
+			// background-color: #ffffff;
 			border-radius: 26rpx;
-			padding: 22rpx;
+			padding: 20rpx 56rpx;
+			
 
 			.top {
 				display: flex;
@@ -99,12 +101,14 @@
 					.mainTitle {
 						font-size: 30rpx;
 						color: #e6bca3;
+						font-weight: bold;
 					}
 
 					.subTitle {
 						margin-top: 16rpx;
 						font-size: 28rpx;
-						color: #FFFFFF;
+						// color: #5d5d5d;
+						color: #ffffff;
 					}
 				}
 
@@ -114,7 +118,7 @@
 					background-image: url('@/static/dh.png');
 					background-position: center;
 					background-size: 132rpx;
-					margin-right: 60rpx;
+					// margin-right: 60rpx;
 					border-radius: 50%;
 					background-repeat: no-repeat;
 				}
@@ -123,16 +127,16 @@
 
 
 			.map {
-				margin-top: 36rpx;
+				// margin-top: 36rpx;
 				width: 100%;
-				height: 323rpx;
-				border: 1px solid green;
+				// height: 323rpx;
+				// border: 1px solid green;
 				border-radius: 26rpx;
 			}
 		}
 
 		.phoneBox {
-			padding: 40rpx 150rpx;
+			padding: 40rpx 180rpx;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;

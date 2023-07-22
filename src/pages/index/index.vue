@@ -8,6 +8,8 @@
 		<view id="addr"></view>
 		<eAddr></eAddr>
 		<eTips></eTips>
+		<end></end>
+		<view class="pic"></view>
 		<view class="navBox">
 			<view class="msc start" @click="handStop" v-if="vuex_mucFlag"></view>
 			<view class="msc stop" @click="handStart" v-else></view>
@@ -27,6 +29,7 @@
 	import page2 from '@/pages/components/page2.vue';
 	import eAddr from '@/pages/components/eAddr.vue';
 	import eTips from '@/pages/components/eTips.vue';
+	import end from '@/pages/components/end.vue';
 	export default {
 		components: {
 			topTitle,
@@ -35,7 +38,8 @@
 			page1,
 			page2,
 			eAddr,
-			eTips
+			eTips,
+			end
 		},
 		data() {
 			return {
@@ -71,7 +75,7 @@
 				this.stop();
 			},
 			start() {
-				if(!this.vuex_hangStopFlag) {
+				if (!this.vuex_hangStopFlag) {
 					this.innerAudioContext.play();
 					this.$u.vuex('vuex_mucFlag', true);
 				}
@@ -141,6 +145,15 @@
 			}
 		}
 
+		.pic {
+			margin: 80rpx auto;
+			width: 150rpx;
+			height: 258rpx;
+			background-image: url('@/static/l2.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 150rpx auto;
+		}
 
 	}
 </style>

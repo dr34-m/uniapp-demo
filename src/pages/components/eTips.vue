@@ -14,7 +14,6 @@
 		<view class="end">
 			<sLine></sLine>
 			<view class="text" v-html="end"></view>
-			<view class="pic"></view>
 		</view>
 	</view>
 </template>
@@ -42,7 +41,7 @@
 					title: "特别提醒",
 					content: "如果大家当天拍了新郎新娘的照片，麻烦p的美一点，谢谢啦~"
 				}],
-				end: "婚礼忙碌<br/>如若我们招待不周<br/>请多多包涵！"
+				end: "以前觉得婚礼是一则官方通告<br/>现在才明白这是一场<br/>人生中为数不多的相聚<br/>是千里之外的奔赴<br/>是不计得失的支持<br/>好久不见，我们婚礼见!"
 			}
 		},
 		methods: {}
@@ -95,16 +94,6 @@
 				font-size: 26rpx;
 				line-height: 49rpx;
 				color: #cebdb5;
-			}
-			
-			.pic {
-				margin: 80rpx auto;
-				width: 150rpx;
-				height: 258rpx;
-				background-image: url('@/static/l2.png');
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: 150rpx auto;
 			}
 		}
 
