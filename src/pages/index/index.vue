@@ -13,6 +13,7 @@
 		<view class="msc start" @click="handStop" v-if="vuex_mucFlag"></view>
 		<view class="msc stop" @click="handStart" v-else></view>
 		<view class="nav" @click="pageTo"></view>
+		<view class="github" @click="copy">本项目已经开源在Github：{{githubUrl}}</view>
 	</view>
 </template>
 
@@ -42,7 +43,8 @@
 		data() {
 			return {
 				nav: require('@/static/nav.png'),
-				innerAudioContext: null
+				innerAudioContext: null,
+				githubUrl: 'https://github.com/dr34-m/wedding'
 			}
 		},
 		onLoad() {
@@ -91,6 +93,11 @@
 			stop() {
 				this.innerAudioContext.pause();
 				this.$u.vuex('vuex_mucFlag', false);
+			},
+			copy() {
+				uni.setClipboardData({
+					data: this.githubUrl
+				});
 			}
 		}
 	}
@@ -163,6 +170,12 @@
 			background-repeat: no-repeat;
 			background-size: 150rpx auto;
 		}
-
+		
+		.github {
+			text-align: center;
+			font-size: 16rpx;
+			color: #ac8c7a;
+			margin-bottom: 228rpx;
+		}
 	}
 </style>

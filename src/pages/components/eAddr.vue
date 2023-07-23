@@ -10,8 +10,6 @@
 				</view>
 				<view class="right"></view>
 			</view>
-
-			<view class="map"></view>
 		</view>
 		<view class="phoneBox">
 			<view class="phoneItem" @click="phoneTo1">
@@ -84,12 +82,12 @@
 
 		.mapBox {
 			width: 470rpx;
-			// height: 466rpx;
 			margin: 50rpx auto;
-			background-color: #45436a;
-			// background-color: #ffffff;
 			border-radius: 26rpx;
 			padding: 20rpx 56rpx;
+			background-image: url($url+'map.png');
+			background-size: 470rpx auto;
+			background-position: center;
 			
 
 			.top {
@@ -107,7 +105,6 @@
 					.subTitle {
 						margin-top: 16rpx;
 						font-size: 28rpx;
-						// color: #5d5d5d;
 						color: #ffffff;
 					}
 				}
@@ -118,20 +115,9 @@
 					background-image: url('@/static/dh.png');
 					background-position: center;
 					background-size: 132rpx;
-					// margin-right: 60rpx;
 					border-radius: 50%;
 					background-repeat: no-repeat;
 				}
-			}
-
-
-
-			.map {
-				// margin-top: 36rpx;
-				width: 100%;
-				// height: 323rpx;
-				// border: 1px solid green;
-				border-radius: 26rpx;
 			}
 		}
 
