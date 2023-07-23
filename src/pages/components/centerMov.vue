@@ -76,7 +76,7 @@
 			},
 			clickWant() {
 				uni.showToast({
-					title: '十分期待与您详见',
+					title: '好久不见，婚礼见！',
 					icon: 'none',
 					duration: 2000
 				});
