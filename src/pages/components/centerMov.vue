@@ -12,7 +12,7 @@
 					<view class="right">豆瓣电影Top520 ＞</view>
 				</view>
 				<view style="font-size: 19rpx;">中国/剧情 爱情 / 2023-8-6<br />2023年上映/片长1314分钟</view>
-				<view class="btns">
+				<view class="btns" @click="clickWant">
 					<view class="btn">
 						<image :src="want" class="img" mode="widthFix"></image>
 						<view>想看</view>
@@ -73,6 +73,13 @@
 				} else {
 					this.$emit("stop");
 				}
+			},
+			clickWant() {
+				uni.showToast({
+					title: '十分期待与您详见',
+					icon: 'none',
+					duration: 2000
+				});
 			}
 		}
 	}

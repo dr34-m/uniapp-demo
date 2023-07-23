@@ -4,7 +4,7 @@
 		<view v-html="text.join('<br/><br/>')" class="content"></view>
 		<view class="pto"></view>
 		<view class="center">
-			<pHeng size="18" top="256" margin="60"></pHeng>
+			<pHeng size="18" top="60" margin="60"></pHeng>
 			<view class="contentBox">
 				<view class="title">
 					<view class="to">To</view>
@@ -36,11 +36,12 @@
 				text: [
 					"相识时<br/>“承蒙相遇 不胜感激”",
 					"相爱时<br/>“人间宝藏 有趣有盼”",
-					"结婚时<br/>“三生有幸 余生皆是你”"
+					"结婚时<br/>“三生有幸 余生皆你”"
 				],
 				content: [
-					"一路走来，心中充满了感谢<br/>关爱与照顾，见证和陪伴<br/>我们都铭记于心<br/>在我们无比重要的这天",
-					"携同我们的父母<br/>邀请您及家人出席我们的婚礼<br/>分享我们的重要时刻"
+					"今日所邀<br/>皆是我们人生在不同纬度<br/>所遇见的最重要的人<br/>借用这场不算盛大<br/>但却足够用心的仪式<br/>来见证爱情最美好的回忆<br/>且铭记一生<br/>我想这大概便是<br/>我们足够珍惜一场婚礼的理由",
+					"在我们无比重要的今天<br/>携同我们的父母<br/>邀请您及家人出席我们的婚礼<br/>分享我们的重要时刻",
+					
 				]
 			}
 		},
