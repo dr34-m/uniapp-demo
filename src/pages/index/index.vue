@@ -50,12 +50,22 @@
 				useWebAudioImplement: false
 			});
 			this.innerAudioContext.src = this.vuex_url + 'msc/stay.mp3';
+			uni.showShareMenu({
+				menus: ['shareAppMessage', 'shareTimeline']
+			})
 		},
 		onHide() {
 			this.stop();
 		},
 		onShow() {
 			this.start();
+		},
+		onShareAppMessage(res) {
+			return {
+				title: '诚邀您参加启航海兰的婚礼',
+				path: '/pages/index/index',
+				imageUrl: require('@/static/share.png')
+			}
 		},
 		methods: {
 			pageTo() {
